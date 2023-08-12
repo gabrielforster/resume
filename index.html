@@ -11,8 +11,8 @@
     <!--Tailwind CDN-->
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="flex item-center justify-center">
-    <main class="max-w-[1100px] min-w-[800px] flex flex-col shadow p-4">
+  <body class="min-h-screen flex item-center justify-center">
+    <main class="h-min my-auto max-w-[1100px] min-w-[800px] flex flex-col shadow-xl p-4">
       <header>
         <h1 class="text-zinc-900 text-2xl font-bold">Gabriel Forster Rocha</h1>
         <h2 class="text-zinc-800 text-xl font-thin">Backend developer</h2>
@@ -21,7 +21,7 @@
       <section class="w-auto flex">
         <aside class="w-1/3">
           <div class="mt-5">
-            <h3 class="underline text-zinc-800 text-xl pb-2">About</h3>
+            <h3 class="underline text-zinc-800 text-xl pb-2 font-bold">About</h3>
             <ul>
               <li>
                 <i class="fa fa-map-marker" aria-hidden="true"></i>
@@ -61,7 +61,7 @@
           </div> <!--About-->
 
           <div class="mt-5 mb-2">
-            <h3 class="underline text-zinc-700 text-xl pb-2">Backend</h3>
+            <h3 class="underline text-zinc-700 text-xl pb-2 font-bold">Backend</h3>
             <ul class="flex flex-wrap">
               <li class="rounded p-1 m-1 bg-zinc-200">Typescript</li>
               <li class="rounded p-1 m-1 bg-zinc-200">NodeJS</li>
@@ -71,7 +71,7 @@
           </div> <!--Backend-->
 
           <div class="mt-5 mb-2">
-            <h3 class="underline text-zinc-700 text-xl pb-2">Frontend</h3>
+            <h3 class="underline text-zinc-700 text-xl pb-2 font-bold">Frontend</h3>
             <ul class="flex flex-wrap">
               <li class="rounded p-1 m-1 bg-zinc-200">HTML/CSS</li>
               <li class="rounded p-1 m-1 bg-zinc-200">Typescript</li>
@@ -83,7 +83,7 @@
           </div> <!--Frontend-->
 
           <div class="mt-5 mb-2">
-            <h3 class="underline text-zinc-700 text-xl pb-2">Databases</h3>
+            <h3 class="underline text-zinc-700 text-xl pb-2 font-bold">Databases</h3>
             <ul class="flex flex-wrap">
               <li class="rounded p-1 m-1 bg-zinc-200">MySQL/MariaDB</li>
               <li class="rounded p-1 m-1 bg-zinc-200">PostgreSQL</li>
@@ -94,7 +94,7 @@
           </div> <!--Databases-->
 
           <div class="mt-5 mb-2">
-            <h3 class="underline text-zinc-700 text-xl pb-2">Operations</h3>
+            <h3 class="underline text-zinc-700 text-xl pb-2 font-bold">Operations</h3>
             <ul class="flex flex-wrap">
               <li class="rounded p-1 m-1 bg-zinc-200">AWS</li>
               <li class="rounded p-1 m-1 bg-zinc-200">Vercel</li>
@@ -105,7 +105,7 @@
           </div> <!--Operations-->
 
           <div class="mt-5 mb-2">
-            <h3 class="underline text-zinc-700 text-xl pb-2">Pratice</h3>
+            <h3 class="underline text-zinc-700 text-xl pb-2 font-bold">Pratice</h3>
             <ul class="flex flex-wrap">
               <li class="rounded p-1 m-1 bg-zinc-200">Agile</li>
               <li class="rounded p-1 m-1 bg-zinc-200">Microservices</li>
@@ -116,8 +116,8 @@
           </div> <!--Pratice-->
 
           <div class="mt-5 mb-2">
-            <h3 class="underline text-zinc-700 text-xl pb-2">Languages</h3>
-            <ul class="flex flex-wrap">
+            <h3 class="underline text-zinc-700 text-xl pb-2 font-bold">Languages</h3>
+            <ul class="flex flex-col flex-wrap">
               <li>Portuguese (Native)</li>
               <li>English (Conversational)</li>
             </ul>
@@ -126,39 +126,69 @@
 
         <aside class="w-2/3">
           <div>
-            <h3 class="text-zinc-700 underline text-xl">Summary</h3>
-            <p class="mt-2">
+            <h3 class="text-zinc-700 underline text-xl font-bold">Summary</h3>
+            <p class="mt-2 font-light">
               Backend Software Developer with expertise in building robust, simple and maintanable systems. Proficient in Typescript/NodeJS, and various databases. Trying GO. Committed to delivering innovative solutions for complex projects.
               Currently undergrad student in software engineering.
             </p>
           </div> <!--Summary-->
 
           <div class="mt-5 w-full">
-            <h3 class="text-zinc-700 underline text-xl">Experience</h3>
+            <h3 class="pb-4 text-zinc-700 underline text-xl font-bold">Experience</h3>
 
             <div id="exp-1" class="w-full">
-              <header class="flex justfy-between">
+              <header class="flex justify-between">
                 <div>
-                  <h1>Adapcon</h1>
+                  <h1 class="text-lg font-bold">Adapcon</h1>
                   <p>Fullstack Developer</p>
                 </div>
 
                 <div>
-                  <p>01/2023 - Present</p>
+                  <p class="font-bold">01/2023 - Present</p>
                 </div>
               </header>
 
-              <div>
-                <ul class="list-disc">
+              <div class="pl-5 w-8/10">
+                <ul class="list-disc leading-6 font-light">
                   <li>
                     Core mantainer of a chatbot + support chat system that made customers able to generate invoices and bankbill documents and talk to a real agent via Whatsapp (Integrated with Meta).
                   </li>
-                  <li>
-                    Refactored the microservice architecture using NestJS to use a more robust and maintanable codebase that uses only NodeJS and the Serverless framework. This microservice is the one that communicates to the Meta integration to send agents messages to customers Whatsapp.
+                  <li class="mt-2">
+                    Reduced AWS Lambda costs by refactoring a microservice architecture using NestJS to use a more robust and maintanable codebase that uses only NodeJS and the Serverless framework. This microservice is the one that communicates to the Meta integration to send agents messages to customers Whatsapp. 
+                  </li>
+                  <li class="mt-2">
+                    Mantainer of a Vue 2 component library that is used all across the system.
                   </li>
                 </ul>
               </div>
-            </div>
+            </div> <!--Adapcon-->
+
+            <div class="mt-4">
+              <header class="flex justify-between">
+                <div>
+                  <h1 class="text-lg font-bold">Adapcon (Intern)</h1>
+                  <p>Fullstack Developer</p>
+                </div>
+
+                <div>
+                  <p class="font-bold">04/2023 - 12/2022</p>
+                </div>
+              </header>
+
+              <div class="pl-5 w-8/10">
+                <ul class="list-disc leading-6 font-light">
+                  <li>
+                    Developed a admin dashboard for a locate reservation system that is used to manage locates, reservations and customers.
+                  </li>
+                  <li class="mt-2">
+                    Developed features for better customer experience in a e-commerce like module of the system.
+                  </li>
+                  <li class="mt-2">
+                    Developed real-time update of most selling products during a new drop.
+                  </li>
+                </ul>
+              </div>
+            </div> <!--Adapcon (Intern)-->
           </div>
         </aside>
       </section>
